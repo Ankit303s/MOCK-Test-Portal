@@ -214,7 +214,7 @@ input[type="radio"]:checked::after {
 /* Responsive */
 @media (max-width: 968) {
     .container {
-        width: 90%;
+        width: 99%;
     }
 
     h1 {
