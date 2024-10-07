@@ -223,8 +223,6 @@ input[type="radio"]:checked::after {
     img{
         height: 50px;
     }
-    
-
     .timer {
         font-size: 18px;
     }
