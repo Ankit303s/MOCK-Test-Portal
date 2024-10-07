@@ -80,7 +80,7 @@ function submitQuiz() {
     // Display result
     document.getElementById('quizPage').classList.add('hidden');
     document.getElementById('resultPage').classList.remove('hidden');
-    document.getElementById('scoreSummary').textContent = `You scored ${score} out of 20`;
+    document.getElementById('scoreSummary').textContent = `${name} scored ${score} out of 20`;
 
     // Show correct, incorrect, and unattempted questions
     const correctList = document.getElementById('correctQuestions');
