@@ -212,7 +212,7 @@ input[type="radio"]:checked::after {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 968) {
     .container {
         width: 90%;
     }
@@ -220,6 +220,7 @@ input[type="radio"]:checked::after {
     h1 {
         font-size: 24px;
     }
+    
 
     .timer {
         font-size: 18px;
