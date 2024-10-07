@@ -59,7 +59,7 @@ ul {
     border-radius: 8px;
     display: inline;
     margin-bottom: 30px;
-    position: relative;
+    position: fixed;
     top: 20px;
     right: 20px;
 }
@@ -212,16 +212,17 @@ input[type="radio"]:checked::after {
 }
 
 /* Responsive */
-@media (max-width: 968) {
+@media (max-width: 968px) {
     .container {
-        width: 80%;
+        width: 90%;
+        padding: 20px;
     }
 
     h1 {
         font-size: 24px;
     }
     img{
-        height: 60px;
+        height: 50px;
     }
     
 
