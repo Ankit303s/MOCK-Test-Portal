@@ -1,6 +1,6 @@
-// let name = prompt("Please Enter your Name!");
-// let welcome = document.getElementById('welcome');
-// welcome.innerText = `Welcome To Cognitive Test ${name}`;
+let name = prompt("Please Enter your Name!");
+let welcome = document.getElementById('welcome');
+welcome.innerText = `Welcome To Cognitive Test ${name}`;
 
 // Timer logic: 20-minute countdown
 let timeLeft = 20 * 60; // 50 minutes in seconds
