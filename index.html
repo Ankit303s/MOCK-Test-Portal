@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Exam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="container">
+        <h1 id="welcome">Welcome to the Cognitive Test </h1>
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ul>
+                <li>You have 15 questions to answer.</li>
+                <li>Each question carries 1 mark.</li>
+                <li>You have 20 minutes(5 minutes Extra) to complete the exam.</li>
+                <li>Once you submit, you cannot change your answers.</li>
+                <li>Do not refresh the page during the exam.</li>
+            </ul>
+            <button class="start-btn" onclick="startExam()">Start Exam</button>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quizPage" class="container hidden">
+        
+        <header>
+            <h1>Abstract Reasoning</h1>
+            <div class="timer">
+            <span id="timer">20:00</span>
+            </div>
+        </header>
+        
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>Que. 1  If DELHI can be coded as CCIDD, how would you code BOMBAY?</p>
+                <label class="option">
+                    <input type="radio" name="q1" value="A"> AJMTVT
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="B"> AMJXVS
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="C"> MJXVSU
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="D"> WXYZAX
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q1')">Clear Response</button>
+            </div>
+            <div class="question">
+                <p>Que. 2 If TEMPLE is coded as VHQURL, how would you code CHURCH?</p>
+                <label class="option">
+                    <input type="radio" name="q2" value="A"> EKYWIO
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="B"> EKUWIO
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="C"> EKYWIN
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="D"> EKYWJO
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q2')">Clear Response</button>
+            </div>
+            <div class="question">
+                <p>Que. 3 DIRECTIONS: In the following questions choose the correct alternative if: <br>
+                    (i) & means 'is greater than'<br>
+                    (ii) % means 'is lesser than'<br>
+                    (iii) > means 'is equal to'<br>
+                    (iv) = means 'is not equal to'<br>
+                    (v) @ means 'is a little more than'<br>
+                    (vi) # means 'is a little less than'<br><br>
+
+                    If a % b and b > c, then</p>
+                <label class="option">
+                    <input type="radio" name="q3" value="A"> a % c
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="B"> c % a
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="C">  c > a
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="D"> Can't say
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q3')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 4 If c @ a and a @ b, then</p>
+                <label class="option">
+                    <input type="radio" name="q4" value="A"> b & a
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="B"> c @ b
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="C"> b @ a
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="D"> Can't say
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q4')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 5 If a = b and b # c, then</p>
+                <label class="option">
+                    <input type="radio" name="q5" value="A"> c & a
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="B"> b % a
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="C"> a & c
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="D"> Can't say
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q5')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 6 <b>Direction:</b> In the question below there are two statements followed by four conclusions I, II, III and IV.
+                    You have to take the two given statements to be true even if they seem to be at variance with commonly
+                    known facts and then decide which of the given conclusions logically follows from the given statements
+                    disregarding commonly known facts. <br>
+                    <b>Statements:</b><br>
+                    I. Some lights are switches.<br>
+                    II. All switches are white.<br>
+                    <b>Conclusions:</b><br>
+                    I. No light is white.<br>
+                    II. Some white are switches.<br>
+                    III. Some switches are lights.<br>
+                    IV. Some lights are white.<br>
+                </p>
+                <label class="option">
+                    <input type="radio" name="q6" value="A"> Only II and III follow.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="B"> Only II, III and IV follow.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="C"> Only I and III follow.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="D"> Only conclusion III follows.
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q6')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 7 Study the following arrangement of the English alphabet and answer the questions given below. <br>
+                    <b>W T S D E F A Y Q U P R U L H I N V X M O G</b> <br>
+                    Which letter is 3rd to the left of the 18th letter from the right side?</p>
+                <label class="option">
+                    <input type="radio" name="q7" value="A"> W
+                </label>
+                <label class="option">
+                    <input type="radio" name="q7" value="B"> S
+                </label>
+                <label class="option">
+                    <input type="radio" name="q7" value="C"> T
+                </label>
+                <label class="option">
+                    <input type="radio" name="q7" value="D"> Y
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q7')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 8 Direction: In the question below there are three statements followed by three conclusions I, II and III.
+                    You have to take the three given statements to be true even if they seem to be at variance from
+                    commonly known facts and then decide which of the given conclusions logically follows from the given
+                    statements disregarding commonly known facts. <br>
+                    <B>Statements:</B> <br>
+                    I. Some cycles are cars. <br>
+                    II. Some cars are buses. <br>
+                    III. No bus is train. <br>
+                    <b>Conclusions:</b> <br>
+                    I. Some buses are cycles. <br>
+                    II. No car is train. <br>
+                    III. Some buses are cars <br>
+                <label class="option">
+                    <input type="radio" name="q8" value="A"> Only conclusion I follows.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q8" value="B"> Only conclusion III follows.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q8" value="C"> Only II and III follow.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q8" value="D"> Only I and II follow.
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q8')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 9 In the following question, some statements are given followed by three conclusions. You have to take
+                    the given statements to be true even if they varies from commonly known facts. Read all the
+                    conclusions and decide which of the given conclusions logically follows from the commonly known facts. <br>
+                    <B>Statements:</B> <br>
+                    All kings are queens. <br>
+                    Some queens are soldiers. <br>
+                    All soldiers are thieves <br>
+                    <b>Conclusions:</b> <br>
+                    I. Some kings are thieves. <br>
+                    II. Some thieves are queens. <br>
+                    III. All kings are thieves. <br>
+                <label class="option">
+                    <input type="radio" name="q9" value="A"> Only conclusion II follows.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q9" value="B"> Only conclusion I follows.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q9" value="C"> All conclusions follow.
+                </label>
+                <label class="option">
+                    <input type="radio" name="q9" value="D"> Only conclusion III follows.
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q9')">Clear Response</button>
+            </div>
+
+            
+            <div class="question">
+                <p>Que. 10 If a mirror is placed on line AB, then which of the given answer figures will be the correct image of
+                    the question figure?</p>
+                    <img src="./Assets/q10 - 1.jpg" alt="">
+                <label class="option">
+                    <input type="radio" name="q10" value="A"> 
+                    <img src="./Assets/q10 - 2.jpeg" alt="mirron_image">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q10" value="B">
+                    <img src="./Assets/q10 - 3.jpg" alt="">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q10" value="C">
+                    <img src="./Assets/q10 - 4.jpg" alt="">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q10" value="D">
+                    <img src="./Assets/q10 - 5.jpg" alt="">
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q10')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 11 1, 3, 6, 10, ____, 21.</p>
+                <label class="option">
+                    <input type="radio" name="q11" value="A">13
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="B"> 14
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="C"> 15
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="D"> 16
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q11')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 12 In the following question various terms of an alphabet series are given with one missing term as shown
+                    by (?) choose the missing term out of the given alternatives. <br>
+                    m _ nm _ n _ an _ a _ ma _
+                </p>
+                <label class="option">
+                    <input type="radio" name="q11" value="A">aamnan
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="B"> ammanm
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="C"> aammnn
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="D"> amammn
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q11')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 13 Find the missing number (?) in the sequence <br>
+                    5, 11, 23, ?, 95, 191.
+                </p>
+                <label class="option">
+                    <input type="radio" name="q13" value="A">47
+                </label>
+                <label class="option">
+                    <input type="radio" name="q13" value="B"> 48
+                </label>
+                <label class="option">
+                    <input type="radio" name="q13" value="C"> 49
+                </label>
+                <label class="option">
+                    <input type="radio" name="q13" value="D"> 50
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q13')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 14 What answer figure will the paper look like after being folded, pierced and opened as shown in the
+                    question figures below? <br>
+                    <img src="./Assets/q14 -1.jpg" alt="">
+                </p>
+                <label class="option">
+                    <input type="radio" name="q14" value="A">
+                    <img src="./Assets/q14 - 2.jpg" alt="">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q14" value="B">
+                    <img src="./Assets/q14 - 3.jpg" alt="">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q14" value="C">
+                    <img src="./Assets/q14 - 4.jpg" alt="">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q14" value="D">
+                    <img src="./Assets/q14 - 5.jpg" alt="">
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q14')">Clear Response</button>
+            </div>
+
+            <div class="question">
+                <p>Que. 15 Two figures given on the left side of (::) are related with some logic/rule/relation. Select the missing
+                    figure on the right of (::) from the given alternatives based on the same logic/rule/relation. <br>
+                    <img src="./Assets/q15 - 1.jpg" alt="">
+                </p>
+                <label class="option">
+                    <input type="radio" name="q15" value="A">
+                    <img src="./Assets/q15 - 2.jpg " alt="">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q15" value="B">
+                    <img src="./Assets/q15 - 3.jpg" alt="">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q15" value="C">
+                    <img src="./Assets/q15 - 4.jpg" alt="">
+                </label>
+                <label class="option">
+                    <input type="radio" name="q15" value="D">
+                    <img src="./Assets/q15 - 5.jpg" alt="">
+                </label>
+                <button type="button" class="clear-btn" onclick="clearResponse('q15')">Clear Response</button>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="btn-container">
+                <button type="button" class="submit-btn" onclick="submitQuiz()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Result Page -->
+    <div id="resultPage" class="container hidden">
+        <h1>Exam Results</h1>
+        <p id="scoreSummary"></p>
+
+        <div id="performanceDetails">
+            <h2>Performance Overview:</h2>
+            <ul id="correctQuestions"></ul>
+            <ul id="wrongQuestions"></ul>
+            <ul id="unattemptedQuestions"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
