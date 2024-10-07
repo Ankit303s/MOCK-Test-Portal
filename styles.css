@@ -220,6 +220,9 @@ input[type="radio"]:checked::after {
     h1 {
         font-size: 24px;
     }
+    img{
+        height: 60px;
+    }
     
 
     .timer {
